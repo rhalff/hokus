@@ -202,12 +202,6 @@ class WorkspaceConfigValidator {
           .max(30)
           .required()
           .error(new Error("The single must have a title.")),
-        file: joi
-          .string()
-          .trim()
-          .regex( /^(content|data|config).+\..+$/)
-          .required()
-          .error(new Error("The single has an invalid filename.")),
         dataformat: joi
           .string()
           .trim()
