@@ -205,10 +205,9 @@ class WorkspaceConfigValidator {
         file: joi
           .string()
           .trim()
-          .regex(/^(content|data|config[.]).+$/)
-          .regex(/^(?!.*[.][.]).*$/)
+          .regex( /^(content|data|config).+\..+$/)
           .required()
-          .error(new Error("The single has a invalid title.")),
+          .error(new Error("The single has an invalid filename.")),
         dataformat: joi
           .string()
           .trim()
